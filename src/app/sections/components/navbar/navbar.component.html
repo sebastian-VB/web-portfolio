@@ -1,0 +1,13 @@
+<section class="pw-container-menunav">
+  <nav class="pw-menunav">
+    <ul class="pw-menuelements">
+      <li *ngFor="let element of listNavElements; let i =index" class="pw-menunav-element">
+        <a #navLink
+          href="#"
+          [ngClass]="{'element-selected': i == selectedIndex}"
+          (click)="changeClass(i)"
+        >{{element}}</a>
+      </li>
+    </ul>
+  </nav>
+</section>
