@@ -19,8 +19,8 @@ export class NavbarComponent {
     this.showNavBar = !this.showNavBar;
 
     this.showNavBar
-    ? element.classList.add('pw-menunav-element-hidden')
-    : element.classList.remove('pw-menunav-element-hidden')
+    ? element.classList.add('pw-menuelements')
+    : element.classList.remove('pw-menuelements')
 
   }
 
