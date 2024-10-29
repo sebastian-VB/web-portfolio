@@ -1,6 +1,6 @@
 
 <nav class="pw-menunav">
-  <ul class="pw-menuelements">
+  <ul class="pw-menuelements" #menuEleContainer>
     <li *ngFor="let element of listNavElements; let i =index" class="pw-menunav-element">
       <a #navLink
         href="#"
@@ -9,4 +9,10 @@
       >{{element}}</a>
     </li>
   </ul>
+  <span></span>
+  <div class="pw-navbar-container-icon" >
+    <button class="pw-navbar-button-icon" (click)="closeOrOpenNavbar(menuEleContainer)">
+      <img src="./icons/close.svg" alt="" class="pw-icon">
+    </button>
+  </div>
 </nav>
