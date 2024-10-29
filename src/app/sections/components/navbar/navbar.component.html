@@ -1,9 +1,14 @@
 
 <nav class="pw-menunav">
-  <ul #menuEleContainer
-    class="pw-menunav-element-hidden"
-    [ngClass]="{'pw-menuelements': showNavBar}"
-    >
+  <div class="pw-navbar-container-icon" >
+    <button class="pw-navbar-button-icon" (click)="closeOrOpenNavbar()">
+      <img [src]="icon" alt="" class="pw-icon">
+    </button>
+  </div>
+  <ul
+  class="pw-menunav-element-hidden"
+  [ngClass]="{'pw-menunav-element-show': showNavBar}"
+  >
     <li *ngFor="let element of listNavElements; let i =index" class="pw-menunav-element">
       <a #navLink
         href="#"
@@ -12,10 +17,4 @@
       >{{element}}</a>
     </li>
   </ul>
-  <span></span>
-  <div class="pw-navbar-container-icon" >
-    <button class="pw-navbar-button-icon" (click)="closeOrOpenNavbar()">
-      <img src="./icons/close.svg" alt="" class="pw-icon">
-    </button>
-  </div>
 </nav>

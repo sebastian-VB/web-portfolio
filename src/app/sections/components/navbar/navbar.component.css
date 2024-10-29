@@ -1,34 +1,43 @@
 
-.pw-menunav{
-  @apply bg-white p-3 text-center flex justify-between;
+.pw-menunav {
+  @apply bg-white p-3 text-center flex flex-col justify-between;
 }
 
-.pw-menunav-element-hidden{
-  @apply hidden ;
+.pw-menunav-element-hidden, .pw-menunav-element-show{
+  @apply max-w-6xl text-center;
+  @apply flex flex-col gap-5 text-black font-normal p-1 w-full;
 }
 
-.pw-menuelements{
-  @apply max-w-6xl text-center ;
-  @apply flex flex-col gap-5 text-black font-medium p-1 w-full;
+.pw-menunav-element-hidden {
+  max-height: 0; /* Altura inicial en 0 para ocultar el menú */
+  opacity: 0; /* Opacidad en 0 para ocultarlo visualmente */
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+.pw-menunav-element-show {
   @apply md:flex-row md:justify-end;
+
+  max-height: 500px; /* Altura máxima al mostrarse, ajusta según el contenido */
+  opacity: 1;
+  transition: max-height 0.3s ease-in, opacity 0.3s ease-in;
 }
 
-.pw-menunav-element{
-  @apply p-1 text-lg ;
+.pw-menunav-element {
+  @apply p-1 text-lg;
 }
 
-.pw-menunav-element a:hover{
+.pw-menunav-element a:hover {
   @apply font-bold;
 }
 
-.element-selected{
+.element-selected {
   color: #4ECDC4;
   font-weight: bold;
   position: relative;
-
 }
 
-.element-selected::after{
+.element-selected::after {
   content: "";
   position: absolute;
   left: 0;
@@ -38,21 +47,30 @@
   background-color: #4ECDC4;
 }
 
-.pw-navbar-container-icon{
+.pw-navbar-container-icon {
+  @apply flex justify-end pr-4 my-2;
   @apply md:hidden;
 }
 
-@media (min-width: 768px){
-
-  .pw-menunav{
+@media (min-width: 768px) {
+  ul {
+    @apply mx-auto;
+  }
+  .pw-menunav {
     @apply justify-center;
   }
-
-  .pw-menunav-element-hidden{
-    @apply max-w-6xl text-center ;
-    @apply flex flex-col gap-5 text-black font-medium p-1 w-full;
+  .pw-menunav-element-hidden {
+    @apply max-w-6xl text-center;
+    @apply flex flex-col gap-5 text-black font-normal p-1 w-full;
     @apply md:flex-row md:justify-end;
+
+    /* Ajustes para visibilidad en pantallas grandes */
+    max-height: none;
+    opacity: 1;
+    overflow: visible;
+  }
+
+  .pw-menunav-element{
+    width: 92px;
   }
 }
-
-
