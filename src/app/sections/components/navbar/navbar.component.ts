@@ -8,8 +8,11 @@ import { Component } from '@angular/core';
 export class NavbarComponent {
 
   public listNavElements: string[] = ['Home', 'About me', 'Curriculun', 'Projects', 'Contact'];
+  public listUrlIcon: string[] = ['./icons/close.svg', './icons/menu.svg'];
+
   public selectedIndex: number = 0;
   public showNavBar: boolean = false;
+  public icon:string = this.listUrlIcon[1];
 
   changeClass(index: number): void{
     this.selectedIndex = index;
@@ -18,6 +21,10 @@ export class NavbarComponent {
 
   closeOrOpenNavbar():void{
     this.showNavBar = !this.showNavBar;
+
+    this.showNavBar
+    ? this.icon = this.listUrlIcon[0]
+    : this.icon = this.listUrlIcon[1]
   }
 
 }
