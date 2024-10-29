@@ -13,15 +13,11 @@ export class NavbarComponent {
 
   changeClass(index: number): void{
     this.selectedIndex = index;
+    this.showNavBar = !this.showNavBar;
   }
 
-  closeOrOpenNavbar(element: HTMLElement):void{
+  closeOrOpenNavbar():void{
     this.showNavBar = !this.showNavBar;
-
-    this.showNavBar
-    ? element.classList.add('pw-menuelements')
-    : element.classList.remove('pw-menuelements')
-
   }
 
 }
