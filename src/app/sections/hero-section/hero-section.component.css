@@ -1,4 +1,8 @@
 
+.pw-container-home{
+  position: relative;
+}
+
 .pw-image-home{
   width: 100vw;
   height: 500px;
@@ -8,9 +12,37 @@
   background-size: cover;
 }
 
+.pw-container-text{
+  position: absolute;
+  top: 150px;
+  left: 30px;
+  @apply text-center flex flex-col gap-3;
+}
+
+.pw-name, .pw-lastname{
+  @apply text-white font-bold;
+}
+
+.pw-name{
+  @apply text-2xl;
+}
+
+.pw-lastname{
+  @apply text-5xl;
+}
+
+.pw-prof{
+  @apply text-yellow-300 font-bold text-xl
+}
+
 @media (min-width:1024px){
   .pw-image-home{
     height: 600px;
+  }
+
+  .pw-container-text{
+    top: 250px;
+    left: 100px;
   }
 }
 
