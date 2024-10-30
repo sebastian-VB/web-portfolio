@@ -1,0 +1,25 @@
+
+.pw-image-home{
+  width: 100vw;
+  height: 500px;
+  background-image: url('../../../../public/images/office_cropped.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@media (min-width:1024px){
+  .pw-image-home{
+    height: 600px;
+  }
+}
+
+@media (min-width:1580px){
+  .pw-image-home{
+    height: 700px;
+  }
+}
+
+
+
+
