@@ -1,0 +1,85 @@
+.pw-container-home {
+  position: relative;
+}
+
+.pw-image-home {
+  width: 100vw;
+  height: 500px;
+  background-image: url('../../../../public/images/office_cropped.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @apply text-center flex flex-col gap-3 content-center justify-center;
+}
+
+/* Animación para los elementos de texto */
+.pw-name-lastname {
+  @apply text-white font-bold flex flex-col;
+  animation: slideIn 1.5s ease-out forwards;
+  transform: translateX(-100%); /* Posición inicial fuera de la pantalla a la izquierda */
+}
+
+.pw-name {
+  @apply text-2xl;
+}
+
+.pw-lastname {
+  @apply text-5xl;
+}
+
+.pw-prof {
+  @apply text-yellow-300 font-bold text-2xl mt-5;
+  animation: fadeIn 2s ease-in forwards;
+  opacity: 0;
+}
+
+.pw-buttoncv{
+  animation: fadeButton 2s ease-in forwards;
+  opacity: 0;
+}
+
+/* Definición de la animación para el deslizamiento */
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Definición de la animación para el desvanecimiento */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeButton {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 1024px) {
+  .pw-image-home {
+    height: 600px;
+    @apply text-start pl-32;
+  }
+}
+
+@media (min-width: 1580px) {
+  .pw-image-home {
+    height: 700px;
+  }
+}
+
+
+

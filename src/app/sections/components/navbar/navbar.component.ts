@@ -16,7 +16,8 @@ export class NavbarComponent {
 
   changeClass(index: number): void{
     this.selectedIndex = index;
-    this.showNavBar = !this.showNavBar;
+    // this.showNavBar = !this.showNavBar;
+    this.closeOrOpenNavbar();
   }
 
   closeOrOpenNavbar():void{
