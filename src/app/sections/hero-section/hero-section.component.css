@@ -10,17 +10,13 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
+  @apply text-center flex flex-col gap-3 content-center justify-center;
 }
 
-.pw-container-text{
-  position: absolute;
-  top: 150px;
-  left: 30px;
-  @apply text-center flex flex-col gap-3;
-}
 
-.pw-name, .pw-lastname{
-  @apply text-white font-bold;
+.pw-name-lastname{
+  @apply text-white font-bold flex flex-col;
 }
 
 .pw-name{
@@ -32,12 +28,14 @@
 }
 
 .pw-prof{
-  @apply text-yellow-300 font-bold text-xl
+  @apply text-yellow-300 font-bold text-xl;
 }
 
 @media (min-width:1024px){
   .pw-image-home{
     height: 600px;
+
+    @apply text-start pl-32
   }
 
   .pw-container-text{
