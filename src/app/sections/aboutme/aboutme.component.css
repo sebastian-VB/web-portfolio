@@ -1,0 +1,26 @@
+
+.pw-container-myinfo{
+  background-color: #1A535C;
+  @apply text-white p-5 text-center;
+}
+
+.pw-container-text{
+  @apply flex flex-col gap-5 mx-auto;
+  max-width: 800px;
+}
+
+.pw-avatar{
+  @apply mx-auto w-64;
+  @apply md:w-80
+}
+
+.pw-greeting{
+  @apply text-yellow-300 text-2xl px-3;
+  @apply md:text-3xl;
+}
+
+.pw-paragraph{
+  @apply mb-20;
+}
+
+
