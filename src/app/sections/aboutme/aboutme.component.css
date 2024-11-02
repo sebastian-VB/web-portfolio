@@ -10,31 +10,17 @@
 }
 
 .pw-avatar{
-  @apply mx-auto;
-  width: 300px;
+  @apply mx-auto w-64;
+  @apply md:w-80
 }
 
 .pw-greeting{
-  @apply text-yellow-300 text-3xl;
-  /* animation: translateAndFadeG 1.5s ease-in forwards;
-  transform: translateX(-100%);
-  opacity: 0; */
+  @apply text-yellow-300 text-2xl px-3;
+  @apply md:text-3xl;
 }
 
 .pw-paragraph{
   @apply mb-20;
-  /* animation: ; */
 }
 
-/* @keyframes translateAndFadeG{
-  from{
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-
-  to{
-    transform: translateX(0);
-    opacity: 1;
-  }
-} */
 
