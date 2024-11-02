@@ -1,0 +1,40 @@
+
+.pw-container-myinfo{
+  background-color: #1A535C;
+  @apply text-white p-5 text-center;
+}
+
+.pw-container-text{
+  @apply flex flex-col gap-5 mx-auto;
+  max-width: 800px;
+}
+
+.pw-avatar{
+  @apply mx-auto;
+  width: 300px;
+}
+
+.pw-greeting{
+  @apply text-yellow-300 text-3xl;
+  /* animation: translateAndFadeG 1.5s ease-in forwards;
+  transform: translateX(-100%);
+  opacity: 0; */
+}
+
+.pw-paragraph{
+  @apply mb-20;
+  /* animation: ; */
+}
+
+/* @keyframes translateAndFadeG{
+  from{
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  to{
+    transform: translateX(0);
+    opacity: 1;
+  }
+} */
+
