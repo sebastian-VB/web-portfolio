@@ -16,4 +16,21 @@
 
 <div class="pw-container-skills">
 
+  <div class="pw-container-content-skills">
+
+    <div
+      *ngFor="let skill of listSkills; let i = index"
+      class="pw-skill"
+      [ngClass]="{'pw-skill-no-last': i != listSkills.length-1}"
+    >
+      <div class="pw-skill-container-icon">
+        <img [src]="skill.imageUrl" alt="">
+      </div>
+      <h3>{{skill.title}}</h3>
+      <p *ngFor="let item of skill.skills">{{item}}</p>
+
+    </div>
+
+  </div>
+
 </div>
