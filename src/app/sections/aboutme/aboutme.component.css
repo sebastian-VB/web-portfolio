@@ -11,7 +11,6 @@
 
 .pw-avatar{
   @apply mx-auto w-64;
-  @apply md:w-80
 }
 
 .pw-greeting{
@@ -20,7 +19,7 @@
 }
 
 .pw-paragraph{
-  @apply mb-5;
+  @apply mb-2;
 }
 
 /* design for skills and his container  */
