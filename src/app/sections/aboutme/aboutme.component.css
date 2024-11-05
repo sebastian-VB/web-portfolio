@@ -33,7 +33,7 @@
 
 .pw-container-content-skills{
   @apply bg-white w-3/4 mx-auto rounded-2xl flex flex-col text-center py-5 shadow-md;
-  @apply  md:w-1/2;
+  @apply  md:w-1/2 xl:flex-row xl:justify-around;
 }
 
 .pw-skill{
@@ -42,6 +42,15 @@
 
 .pw-skill-no-last{
   @apply border-b-2;
+  @apply xl:border-b-0 xl:border-r-2 xl:pr-20;
+}
+
+.pw-skill-design{
+  @apply xl:pl-9;
+}
+
+.pw-skill-back{
+  @apply xl:pr-9;
 }
 
 .pw-skill-container-icon{

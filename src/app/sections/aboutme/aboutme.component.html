@@ -16,12 +16,16 @@
 
 <div class="pw-container-skills">
 
-  <div class="pw-container-content-skills">
+  <div class="pw-container-content-skills" data-aos="zoom-in-up" data-aos-duration="1500">
 
     <div
       *ngFor="let skill of listSkills; let i = index"
       class="pw-skill"
-      [ngClass]="{'pw-skill-no-last': i != listSkills.length-1}"
+      [ngClass]="{
+        'pw-skill-no-last': i != listSkills.length-1,
+        'pw-skill-design': i == listSkills.length-3,
+        'pw-skill-back': i == listSkills.length-1,
+      }"
     >
       <div class="pw-skill-container-icon">
         <img [src]="skill.imageUrl" alt="">

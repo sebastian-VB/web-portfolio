@@ -25,7 +25,7 @@ export class AboutmeComponent implements OnInit{
     {
       imageUrl: './icons/backend-icon.svg',
       title: 'Backend',
-      skills: ['JAVA', 'SPRINGBOOT', 'SQL', 'POSTMAN/INSOMNIA']
+      skills: ['JAVA', 'SPRINGBOOT', 'SQL', 'POSTMAN', 'INSOMNIA']
     },
   ];
 
