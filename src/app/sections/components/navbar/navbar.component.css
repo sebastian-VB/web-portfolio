@@ -68,6 +68,17 @@
     max-height: none;
     opacity: 1;
     overflow: visible;
+    animation: menunavAnimate 1.5s ease-out forwards;
+    transform: translateX(200%);
+  }
+
+  @keyframes menunavAnimate{
+    from{
+      transform: translateX(200%);
+    }
+    to{
+      transform: translateX(0);
+    }
   }
 
   .pw-menunav-element{
