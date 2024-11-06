@@ -7,6 +7,7 @@ import { NavbarComponent } from './sections/components/navbar/navbar.component';
 import { HomeSectionComponent } from './sections/home-section/home-section.component';
 import { ButtonCVComponent } from './sections/components/button-cv/button-cv.component';
 import { AboutmeComponent } from './sections/aboutme/aboutme.component';
+import { CurriculumSectionComponent } from './sections/curriculum-section/curriculum-section.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { AboutmeComponent } from './sections/aboutme/aboutme.component';
     NavbarComponent,
     HomeSectionComponent,
     ButtonCVComponent,
-    AboutmeComponent
+    AboutmeComponent,
+    CurriculumSectionComponent
   ],
   imports: [
     BrowserModule,
