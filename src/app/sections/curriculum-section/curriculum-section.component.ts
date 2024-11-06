@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import * as AOS from 'aos';
 import { Work } from '../interfaces/work.interface';
 
 @Component({
@@ -6,7 +7,7 @@ import { Work } from '../interfaces/work.interface';
   templateUrl: './curriculum-section.component.html',
   styleUrl: './curriculum-section.component.css'
 })
-export class CurriculumSectionComponent {
+export class CurriculumSectionComponent implements OnInit{
 
   currentIndex: number = 0;
 
@@ -28,12 +29,19 @@ export class CurriculumSectionComponent {
       description: [
         'Ejecución de nuevas funcionalidades en ambientes de prueba',
         'Capturar las peticiones HTTP mediante OWASP',
-        'Verificar si el producto cumple con los lineamientos de la empresa',
+        'Verificar si se cumplen con los lineamientos de la empresa',
         'Realizar ataques mediante OWASP',
         'Revisar código'
       ]
     },
   ];
+
+  ngOnInit(): void {
+    AOS.init({duration: 1000});
+    window.addEventListener('load', () => {
+      AOS.refresh();
+    });
+  }
 
   nextInfo() {
     this.currentIndex = (this.currentIndex + 1) % this.works.length;

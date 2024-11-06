@@ -1,8 +1,10 @@
 <section class="pw-container-works">
 
-  <h2 class="pw-works-title">Experiencia laboral</h2>
+  <h2 class="pw-works-title" data-aos="fade-right">Experiencia laboral</h2>
 
-  <div class="pw-carousel-container">
+  <app-button-cv data-aos="flip-left"></app-button-cv>
+
+  <div class="pw-carousel-container" data-aos="zoom-in">
     <div class="pw-carousel-content">
       <img [src]="works[currentIndex].imageUrl" alt="Logo" class="logo">
       <h2>{{ works[currentIndex].name }}</h2>
@@ -13,7 +15,6 @@
       </ul>
     </div>
 
-    <!-- Indicador y botón -->
     <div class="pw-carousel-indicators">
       <button *ngFor="let info of works; let i = index"
               [class.active]="i === currentIndex"

@@ -1,5 +1,5 @@
 .pw-container-works{
-  @apply bg-white p-5 pb-10 text-center flex flex-col gap-10;
+  @apply bg-white p-5 pb-10 text-center flex flex-col gap-8 ;
 }
 
 .pw-works-title{
