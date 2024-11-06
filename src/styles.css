@@ -4,6 +4,5 @@
 @tailwind utilities;
 
 body{
-  @apply bg-slate-200;
   overflow-x: hidden;
 }
