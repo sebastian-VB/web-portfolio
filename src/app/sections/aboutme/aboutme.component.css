@@ -27,7 +27,7 @@
 .pw-container-skills{
   width: 100%;
   background: linear-gradient(to bottom, #1A535C 150px, white 10%);
-  @apply p-10
+  @apply p-10 mb-10;
 }
 
 .pw-container-content-skills{

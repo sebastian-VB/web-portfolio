@@ -31,6 +31,9 @@ export class AboutmeComponent implements OnInit{
 
   ngOnInit(): void {
     AOS.init({duration: 1000});
+    window.addEventListener('load', () => {
+      AOS.refresh();
+    });
   }
 
 }
