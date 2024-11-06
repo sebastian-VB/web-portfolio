@@ -8,6 +8,8 @@ import { Work } from '../interfaces/work.interface';
 })
 export class CurriculumSectionComponent {
 
+  currentIndex: number = 0;
+
   public works: Work[] = [
     {
       imageUrl: './images/Venkizmet.webp',
@@ -32,4 +34,8 @@ export class CurriculumSectionComponent {
       ]
     },
   ];
+
+  nextInfo() {
+    this.currentIndex = (this.currentIndex + 1) % this.works.length;
+  }
 }
