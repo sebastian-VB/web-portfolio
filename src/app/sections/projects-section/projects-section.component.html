@@ -1,1 +1,33 @@
-<p>projects-section works!</p>
+<section class="pw-container-projects">
+
+  <h2 class="pw-projects-title">Proyectos personales</h2>
+
+  <p class="pw-profile-text">
+    Se pueden encontrar estos y otros proyectos en mi perfil de
+    <a [href]="profileUrl" target="_blank" rel="noopener noreferrer">
+      GitHub
+    </a>
+  </p>
+
+  <div class="pw-container-cards-projects">
+
+    <div
+      *ngFor="let project of projectsList"
+      class="pw-card-project">
+
+      <div
+        class="pw-card-project-nameImg"
+        [style.backgroundImage]="'url(' + project.imageUrl + ')'"
+      >
+        <div class="pw-container-nameproject">
+          <p>{{project.projectName}}</p>
+        </div>
+      </div>
+
+      <!-- otro container -->
+
+    </div>
+
+  </div>
+
+</section>
