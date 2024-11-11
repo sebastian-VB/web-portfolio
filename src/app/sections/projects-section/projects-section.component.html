@@ -25,6 +25,18 @@
       </div>
 
       <!-- otro container -->
+      <div class="pw-card-technologies">
+        <div class="pw-tec">
+          <p *ngFor="let tec of project.technologies">
+            {{tec}}
+          </p>
+        </div>
+        <div class="pw-repository">
+          <a [href]="project.repositoryUrl" target="_blank" rel="noopener noreferrer">
+            <img [src]="githubImg" alt="Github">
+          </a>
+        </div>
+      </div>
 
     </div>
 
