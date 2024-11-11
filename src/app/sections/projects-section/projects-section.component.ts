@@ -9,6 +9,7 @@ import { Project } from '../interfaces/project.interface';
 export class ProjectsSectionComponent {
 
   public profileUrl: string = 'https://github.com/sebastian-VB';
+  public githubImg: string = './icons/github.svg';
 
   public projectsList: Project[] = [
     {
