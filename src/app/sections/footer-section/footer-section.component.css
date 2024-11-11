@@ -18,11 +18,11 @@
   border: 2px solid white;
   padding: 10px;
   border-radius: 50%;
-  transition: border .5s ease;
+  transition: background-color .5s ease;
 }
 
 .pw-contact:hover	{
-  border: 2px solid yellow;
+  background-color: #072f35;
 }
 
 .pw-contact a{
@@ -33,3 +33,4 @@
   width: 33px;
   height: 33px;
 }
+
