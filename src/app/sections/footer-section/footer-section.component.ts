@@ -23,9 +23,16 @@ export class FooterSectionComponent implements OnInit{
     {
       name: 'Gmail',
       iconUrl: './icons/gmail.svg',
-      linkUrl: ''
+      linkUrl: 'mailto:sebas99vb@gmail.com'
+    },
+    {
+      name: 'WhatsApp',
+      iconUrl: './icons/whatsapp.svg',
+      linkUrl: 'https://acortar.link/ym3ZCn'
     },
   ];
+  // linkUrl: 'https://acortar.link/ym3ZCn' - url acortada
+  // linkUrl: 'https://wa.me/51920780679'
 
   ngOnInit(): void {
     AOS.init({duration: 1000});
