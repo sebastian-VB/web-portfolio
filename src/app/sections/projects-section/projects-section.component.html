@@ -1,8 +1,8 @@
 <section class="pw-container-projects">
 
-  <h2 class="pw-projects-title">Proyectos personales</h2>
+  <h2 class="pw-projects-title" data-aos="fade-right">Proyectos personales</h2>
 
-  <p class="pw-profile-text">
+  <p class="pw-profile-text" data-aos="fade-left">
     Se pueden encontrar estos y otros proyectos en mi perfil de
     <a [href]="profileUrl" target="_blank" rel="noopener noreferrer">
       GitHub
@@ -12,6 +12,7 @@
   <div class="pw-container-cards-projects">
 
     <div
+      data-aos="zoom-in-up"
       *ngFor="let project of projectsList"
       class="pw-card-project">
 

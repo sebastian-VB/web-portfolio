@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import * as AOS from 'aos';
 import { Project } from '../interfaces/project.interface';
 
 @Component({
@@ -6,7 +7,7 @@ import { Project } from '../interfaces/project.interface';
   templateUrl: './projects-section.component.html',
   styleUrl: './projects-section.component.css'
 })
-export class ProjectsSectionComponent {
+export class ProjectsSectionComponent implements OnInit{
 
   public profileUrl: string = 'https://github.com/sebastian-VB';
   public githubImg: string = './icons/github.svg';
@@ -49,4 +50,11 @@ export class ProjectsSectionComponent {
       repositoryUrl: 'https://github.com/sebastian-VB/heores-app'
     },
   ];
+
+  ngOnInit(): void {
+    AOS.init({duration: 1000});
+    window.addEventListener('load', () => {
+      AOS.refresh();
+    });
+  }
 }
