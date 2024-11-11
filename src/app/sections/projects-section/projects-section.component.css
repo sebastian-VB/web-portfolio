@@ -1,0 +1,90 @@
+
+.pw-container-projects{
+  @apply bg-white p-5 pb-10 text-center flex flex-col gap-8 ;
+}
+
+.pw-projects-title{
+  color: #1A535C;
+  @apply font-bold text-xl;
+}
+
+.pw-profile-text a{
+  @apply text-blue-700 font-bold;
+}
+
+/* diseño de las tarjetas */
+
+.pw-container-cards-projects{
+  @apply max-w-7xl mx-auto grid grid-cols-1 gap-4 justify-center;
+  @apply lg:grid-cols-2 xl:grid-cols-3;
+}
+
+.pw-card-project{
+  width: 350px;
+  height: 180px;
+  position: relative;
+}
+
+.pw-card-project-nameImg{
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.pw-container-nameproject{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1a535ce9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.pw-card-technologies{
+  @apply flex flex-col justify-center content-center gap-5;
+  width: 100%;
+  height: 100%;
+  background-color: #11373d;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+  clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+  transition: clip-path 0.5s ease;
+}
+
+.pw-tec{
+  @apply flex flex-wrap gap-2 justify-center;
+}
+
+.pw-tec p{
+  @apply bg-white px-2 py-1 rounded-lg font-semibold text-xs;
+}
+
+.pw-repository a{
+  @apply flex justify-center;
+  transform: scale(.8);
+  transition: scale .5s ease-in;
+}
+
+.pw-repository a img:hover{
+  transform: scale(1.1);
+}
+
+.pw-card-project:hover{
+
+  .pw-card-technologies{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+}

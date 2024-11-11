@@ -1,0 +1,46 @@
+<section class="pw-container-projects">
+
+  <h2 class="pw-projects-title" data-aos="fade-right">Proyectos personales</h2>
+
+  <p class="pw-profile-text" data-aos="fade-left">
+    Se pueden encontrar estos y otros proyectos en mi perfil de
+    <a [href]="profileUrl" target="_blank" rel="noopener noreferrer">
+      GitHub
+    </a>
+  </p>
+
+  <div class="pw-container-cards-projects">
+
+    <div
+      data-aos="zoom-in-up"
+      *ngFor="let project of projectsList"
+      class="pw-card-project">
+
+      <div
+        class="pw-card-project-nameImg"
+        [style.backgroundImage]="'url(' + project.imageUrl + ')'"
+      >
+        <div class="pw-container-nameproject">
+          <p>{{project.projectName}}</p>
+        </div>
+      </div>
+
+      <!-- otro container -->
+      <div class="pw-card-technologies">
+        <div class="pw-tec">
+          <p *ngFor="let tec of project.technologies">
+            {{tec}}
+          </p>
+        </div>
+        <div class="pw-repository">
+          <a [href]="project.repositoryUrl" target="_blank" rel="noopener noreferrer">
+            <img [src]="githubImg" alt="Github">
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>

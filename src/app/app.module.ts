@@ -8,6 +8,7 @@ import { HomeSectionComponent } from './sections/home-section/home-section.compo
 import { ButtonCVComponent } from './sections/components/button-cv/button-cv.component';
 import { AboutmeComponent } from './sections/aboutme/aboutme.component';
 import { CurriculumSectionComponent } from './sections/curriculum-section/curriculum-section.component';
+import { ProjectsSectionComponent } from './sections/projects-section/projects-section.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { CurriculumSectionComponent } from './sections/curriculum-section/curric
     HomeSectionComponent,
     ButtonCVComponent,
     AboutmeComponent,
-    CurriculumSectionComponent
+    CurriculumSectionComponent,
+    ProjectsSectionComponent
   ],
   imports: [
     BrowserModule,
