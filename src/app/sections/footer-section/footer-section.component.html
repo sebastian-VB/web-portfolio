@@ -1,9 +1,9 @@
 <div class="pw-container-footer">
 
-  <h2>Conoce más de mí mediante</h2>
+  <h2 data-aos="fade-left">Conoce más de mí mediante</h2>
 
   <div class="pw-container-icons">
-    <div class="pw-contact" *ngFor="let contact of contactList">
+    <div class="pw-contact" *ngFor="let contact of contactList" >
       <a [href]="contact.linkUrl" target="_blank" rel="noopener noreferrer">
         <img [src]="contact.iconUrl" alt="">
       </a>
