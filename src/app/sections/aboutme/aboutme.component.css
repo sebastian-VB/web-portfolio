@@ -18,10 +18,6 @@
   @apply md:text-3xl;
 }
 
-.pw-paragraph{
-  @apply mb-2;
-}
-
 /* design for skills and his container  */
 
 .pw-container-skills{
@@ -34,8 +30,6 @@
   @apply bg-white w-3/4 mx-auto rounded-2xl py-5 shadow-md;
   @apply grid grid-cols-1 gap-4;
   @apply lg:grid-cols-3 md:w-1/2;
-  /* @apply flex flex-col text-center py-5 shadow-md;
-  @apply  md:w-1/2 xl:flex-row xl:justify-around; */
 }
 
 .pw-skill{
