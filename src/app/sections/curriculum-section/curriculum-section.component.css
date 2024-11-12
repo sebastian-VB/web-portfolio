@@ -1,5 +1,6 @@
 .pw-container-works{
   @apply bg-white p-5 pb-10 text-center flex flex-col gap-8 ;
+  padding-top: 90px;
 }
 
 .pw-works-title{
@@ -46,6 +47,12 @@
 
 button:focus {
   outline: none;
+}
+
+@media (min-width: 768px){
+  .pw-container-works{
+    padding-top: 80px;
+  }
 }
 
 

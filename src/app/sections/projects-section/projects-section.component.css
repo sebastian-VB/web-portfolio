@@ -6,6 +6,7 @@
 .pw-projects-title{
   color: #1A535C;
   @apply font-bold text-xl;
+  margin-top: 80px
 }
 
 .pw-profile-text a{
@@ -86,5 +87,11 @@
 
   .pw-card-technologies{
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+}
+
+@media (min-width: 768px){
+  .pw-projects-title{
+    margin-top: 0px
   }
 }

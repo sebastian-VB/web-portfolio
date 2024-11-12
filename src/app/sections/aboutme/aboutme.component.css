@@ -2,6 +2,7 @@
 .pw-container-myinfo{
   background-color: #1A535C;
   @apply text-white p-5 text-center;
+  padding-top: 60px;
 }
 
 .pw-container-text{
@@ -48,6 +49,12 @@
 
 .pw-skill h3{
   @apply mb-2 font-bold text-xl
+}
+
+@media (min-width: 768px){
+  .pw-container-myinfo{
+    padding-top: 50px;
+  }
 }
 
 
