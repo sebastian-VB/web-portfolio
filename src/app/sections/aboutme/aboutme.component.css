@@ -18,10 +18,6 @@
   @apply md:text-3xl;
 }
 
-.pw-paragraph{
-  @apply mb-2;
-}
-
 /* design for skills and his container  */
 
 .pw-container-skills{
@@ -31,25 +27,18 @@
 }
 
 .pw-container-content-skills{
-  @apply bg-white w-3/4 mx-auto rounded-2xl flex flex-col text-center py-5 shadow-md;
-  @apply  md:w-1/2 xl:flex-row xl:justify-around;
+  @apply bg-white w-3/4 mx-auto rounded-2xl py-5 shadow-md;
+  @apply grid grid-cols-1 gap-4;
+  @apply lg:grid-cols-3 md:w-1/2;
 }
 
 .pw-skill{
-  @apply py-5;
+  @apply py-5 flex flex-col text-center;
 }
 
 .pw-skill-no-last{
   @apply border-b-2;
-  @apply xl:border-b-0 xl:border-r-2 xl:pr-20;
-}
-
-.pw-skill-design{
-  @apply xl:pl-9;
-}
-
-.pw-skill-back{
-  @apply xl:pr-9;
+  @apply lg:border-b-0 lg:border-r-2;
 }
 
 .pw-skill-container-icon{
