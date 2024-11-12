@@ -13,18 +13,16 @@
   >
     <li *ngFor="let element of listNavElements; let i =index" class="pw-menunav-element">
       <a #navLink
-        [href]="'#' + element.link"
-        [ngClass]="{'element-selected': i == selectedIndex}"
-        (click)="changeClass(i)"
+      [ngClass]="{'element-selected': i == selectedIndex}"
+      (click)="scrollToSection(element.link); changeClass(i)"
       >{{element.name}}</a>
     </li>
   </ul>
 </nav>
 
-<app-home-section></app-home-section>
+<app-home-section id="home"></app-home-section>
 <app-aboutme id="aboutme"></app-aboutme>
 <app-curriculum-section id="curriculum"></app-curriculum-section>
 <app-projects-section id="projects"></app-projects-section>
 <app-footer-section id="contact"></app-footer-section>
 
-<router-outlet />

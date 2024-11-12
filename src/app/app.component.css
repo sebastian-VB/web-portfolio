@@ -1,6 +1,12 @@
 
 .pw-menunav {
   @apply bg-white p-3 text-center flex flex-col justify-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .pw-menunav-element-hidden, .pw-menunav-element-show{
@@ -25,6 +31,10 @@
 
 .pw-menunav-element {
   @apply p-1 text-lg;
+}
+
+.pw-menunav-element a{
+  cursor: pointer;
 }
 
 .pw-menunav-element a:hover {
