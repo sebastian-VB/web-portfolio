@@ -4,12 +4,16 @@ import { Component } from '@angular/core';
   selector: 'app-button-cv',
   template:
   `
-    <button class= "bg-yellow-300 px-4 py-3 rounded-xl font-bold mt-6
-                  hover:bg-yellow-400">
+    <a
+      [href]="urlCV"
+      target="_blank" rel="noopener noreferrer" download
+      class= "bg-yellow-300 px-4 py-3 rounded-xl font-bold cursor-pointer hover:bg-yellow-400"
+    >
       Descargar CV
-    </button>
+    </a>
   `,
 })
 export class ButtonCVComponent {
 
+  public urlCV: string = "url"
 }
