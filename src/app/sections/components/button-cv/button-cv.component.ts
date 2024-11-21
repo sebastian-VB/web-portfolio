@@ -15,5 +15,5 @@ import { Component } from '@angular/core';
 })
 export class ButtonCVComponent {
 
-  public urlCV: string = "url"
+  public urlCV: string = "https://drive.google.com/file/d/1fikR317bIhhq2qKLp6INayMdAwNmkJtq/view?export=download"
 }
