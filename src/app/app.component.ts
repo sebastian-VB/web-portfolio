@@ -36,6 +36,13 @@ export class AppComponent {
   public showNavBar: boolean = false;
   public icon:string = this.listUrlIcon[1];
 
+  scrollToSection(sectionId: string) {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
   changeClass(index: number): void{
     this.selectedIndex = index;
     this.closeOrOpenNavbar();
