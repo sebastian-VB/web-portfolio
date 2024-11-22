@@ -1,0 +1,40 @@
+<div class="pw-container-myinfo">
+
+  <div class="pw-container-text" data-aos="fade-left">
+    <img [src]="avatarImage" alt="" class="pw-avatar" data-aos="fade-left">
+
+    <h2 class="pw-greeting" data-aos="fade-right">
+      Hola, soy Sebastián. Gusto en conocerte.
+    </h2>
+
+    <p class="pw-paragraph" data-aos="fade-left">
+      Bachiller en Ingeniería Informática, dedicado a la programación, apasionado por el mundo del desarrollo de software, el avance tecnológico y el conocimiento que se puede obtener y aportar. Busco poner en práctica los conocimientos que he adquirido,
+      aprender temas nuevos y ser parte del proceso de desarrollo de soluciones implementando tecnología
+      de la mano de profesionales y aprender de ellos.
+    </p>
+  </div>
+
+</div>
+
+<div class="pw-container-skills">
+
+  <div class="pw-container-content-skills" data-aos="zoom-in-up" data-aos-duration="1500">
+
+    <div
+      *ngFor="let skill of listSkills; let i = index"
+      class="pw-skill"
+      [ngClass]="{
+        'pw-skill-no-last': i != listSkills.length-1,
+      }"
+    >
+      <div class="pw-skill-container-icon">
+        <img [src]="skill.imageUrl" alt="">
+      </div>
+      <h3>{{skill.title}}</h3>
+      <p *ngFor="let item of skill.skills">{{item}}</p>
+
+    </div>
+
+  </div>
+
+</div>

@@ -1,0 +1,58 @@
+.pw-container-works{
+  @apply bg-white p-5 pb-10 text-center flex flex-col gap-8 ;
+  padding-top: 90px;
+}
+
+.pw-works-title{
+  color: #1A535C;
+  @apply font-bold text-xl;
+}
+
+.pw-carousel-container {
+  text-align: center;
+  position: relative;
+}
+
+.pw-carousel-content {
+  @apply flex flex-col gap-10;
+}
+
+.pw-carousel-content img{
+  @apply w-60 h-16 mx-auto;
+}
+
+.pw-carousel-content h2{
+  @apply font-semibold;
+}
+
+.pw-carousel-indicators {
+  @apply flex justify-center gap-3 mt-5;
+}
+
+.pw-carousel-indicators button {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #f0c02b;
+  border: none;
+  opacity: 0.5;
+  transition: opacity .4s ease-in;
+}
+
+.pw-carousel-indicators button.active {
+  opacity: 1;
+  background-color: #ffa500;
+  transition: opacity .4s ease-in-out;
+}
+
+button:focus {
+  outline: none;
+}
+
+@media (min-width: 768px){
+  .pw-container-works{
+    padding-top: 80px;
+  }
+}
+
+

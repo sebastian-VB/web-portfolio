@@ -1,0 +1,36 @@
+
+.pw-container-footer{
+  margin-top: 30px;
+  background-color: #1A535C;
+  color: white;
+  @apply p-10 flex flex-col gap-14 text-center;
+}
+
+.pw-container-footer h2{
+  @apply text-2xl font-semibold
+}
+
+.pw-container-icons{
+  @apply flex justify-center gap-8
+}
+
+.pw-contact{
+  border: 2px solid white;
+  padding: 10px;
+  border-radius: 50%;
+  transition: background-color .5s ease;
+}
+
+.pw-contact:hover	{
+  background-color: #072f35;
+}
+
+.pw-contact a{
+  cursor: pointer;
+}
+
+.pw-contact a img{
+  width: 33px;
+  height: 33px;
+}
+
