@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import * as AOS from 'aos';
 import { Work } from '../interfaces/work.interface';
 
 @Component({
@@ -37,10 +36,6 @@ export class CurriculumSectionComponent implements OnInit{
   ];
 
   ngOnInit(): void {
-    AOS.init({duration: 1000});
-    window.addEventListener('load', () => {
-      AOS.refresh();
-    });
   }
 
   nextInfo() {

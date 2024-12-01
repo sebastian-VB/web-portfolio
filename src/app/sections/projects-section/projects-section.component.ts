@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import * as AOS from 'aos';
 import { Project } from '../interfaces/project.interface';
 
 @Component({
@@ -21,7 +20,7 @@ export class ProjectsSectionComponent implements OnInit{
     },
     {
       imageUrl: './images/img-projects/project_backend.webp',
-      projectName: 'Sistema de exmenes - backend',
+      projectName: 'CRUD de exmenes - backend',
       technologies: ['JAVA', 'SPRINGBOOT', 'JWT'],
       repositoryUrl: 'https://github.com/sebastian-VB/testing-system-backend'
     },
@@ -39,7 +38,7 @@ export class ProjectsSectionComponent implements OnInit{
     },
     {
       imageUrl: './images/img-projects/project_backend.webp',
-      projectName: 'Sistema para consultorio médico - backend',
+      projectName: 'CRUD para consultorio médico - backend',
       technologies: ['JAVA', 'SPRINGBOOT', 'JWT'],
       repositoryUrl: 'https://github.com/sebastian-VB/crud_medical_office_withWT'
     },
@@ -52,9 +51,5 @@ export class ProjectsSectionComponent implements OnInit{
   ];
 
   ngOnInit(): void {
-    AOS.init({duration: 1000});
-    window.addEventListener('load', () => {
-      AOS.refresh();
-    });
   }
 }

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import * as AOS from 'aos';
 import { Skill } from '../interfaces/skill.interface';
 
 @Component({
@@ -30,10 +29,7 @@ export class AboutmeComponent implements OnInit{
   ];
 
   ngOnInit(): void {
-    AOS.init({duration: 1000});
-    window.addEventListener('load', () => {
-      AOS.refresh();
-    });
+
   }
 
 }
