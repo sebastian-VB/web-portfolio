@@ -1,13 +1,14 @@
-import { Component, OnInit } from '@angular/core';
-import * as AOS from 'aos';
+import { AfterViewInit, Component } from '@angular/core';
 import { Work } from '../interfaces/work.interface';
+import ScrollReveal from 'scrollreveal';
+
 
 @Component({
   selector: 'app-curriculum-section',
   templateUrl: './curriculum-section.component.html',
   styleUrl: './curriculum-section.component.css'
 })
-export class CurriculumSectionComponent implements OnInit{
+export class CurriculumSectionComponent implements AfterViewInit{
 
   currentIndex: number = 0;
 
@@ -36,10 +37,29 @@ export class CurriculumSectionComponent implements OnInit{
     },
   ];
 
-  ngOnInit(): void {
-    AOS.init({duration: 1000});
-    window.addEventListener('load', () => {
-      AOS.refresh();
+  ngAfterViewInit(): void {
+    ScrollReveal().reveal('.reveal-title-cu', {
+      distance: '100px',
+      duration: 800,
+      easing: 'ease-in-out',
+      origin: 'rigth',
+      reset: true
+    });
+
+    ScrollReveal().reveal('.reveal-bt-cv', {
+      distance: '100px',
+      duration: 800,
+      easing: 'ease-in-out',
+      origin: 'left',
+      reset: true
+    });
+
+    ScrollReveal().reveal('.reveal-carousel', {
+      distance: '100px',
+      duration: 800,
+      easing: 'ease-in-out',
+      origin: 'bottom',
+      reset: true
     });
   }
 

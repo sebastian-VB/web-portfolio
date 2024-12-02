@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import * as AOS from 'aos';
 import { Contact } from '../interfaces/contact.interface';
 
 @Component({
@@ -35,9 +34,5 @@ export class FooterSectionComponent implements OnInit{
   // linkUrl: 'https://wa.me/51920780679'
 
   ngOnInit(): void {
-    AOS.init({duration: 1000});
-    window.addEventListener('load', () => {
-      AOS.refresh();
-    });
   }
 }

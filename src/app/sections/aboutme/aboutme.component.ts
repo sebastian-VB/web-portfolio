@@ -1,13 +1,13 @@
-import { Component, OnInit } from '@angular/core';
-import * as AOS from 'aos';
+import { AfterViewInit, Component } from '@angular/core';
 import { Skill } from '../interfaces/skill.interface';
+import ScrollReveal from 'scrollreveal';
 
 @Component({
   selector: 'app-aboutme',
   templateUrl: './aboutme.component.html',
   styleUrl: './aboutme.component.css'
 })
-export class AboutmeComponent implements OnInit{
+export class AboutmeComponent implements AfterViewInit{
 
   public avatarImage: string = './images/avatar.png';
 
@@ -29,10 +29,29 @@ export class AboutmeComponent implements OnInit{
     },
   ];
 
-  ngOnInit(): void {
-    AOS.init({duration: 1000});
-    window.addEventListener('load', () => {
-      AOS.refresh();
+  ngAfterViewInit(): void {
+
+    ScrollReveal().reveal('.reveal-gr', {
+      distance: '100px',
+      duration: 800,
+      easing: 'ease-in-out',
+      origin: 'rigth',
+      reset: true
+    });
+    ScrollReveal().reveal('.reveal-prg', {
+      distance: '100px',
+      duration: 800,
+      easing: 'ease-in-out',
+      origin: 'left',
+      reset: true
+    });
+
+    ScrollReveal().reveal('.reveal-skills', {
+      distance: '100px',
+      duration: 800,
+      easing: 'ease-in-out',
+      origin: 'bottom',
+      reset: true
     });
   }
 

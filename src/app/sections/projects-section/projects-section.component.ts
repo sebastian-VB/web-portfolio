@@ -1,13 +1,13 @@
-import { Component, OnInit } from '@angular/core';
-import * as AOS from 'aos';
+import { AfterViewInit, Component } from '@angular/core';
 import { Project } from '../interfaces/project.interface';
+import ScrollReveal from 'scrollreveal';
 
 @Component({
   selector: 'app-projects-section',
   templateUrl: './projects-section.component.html',
   styleUrl: './projects-section.component.css'
 })
-export class ProjectsSectionComponent implements OnInit{
+export class ProjectsSectionComponent implements AfterViewInit{
 
   public profileUrl: string = 'https://github.com/sebastian-VB';
   public githubImg: string = './icons/github.svg';
@@ -21,7 +21,7 @@ export class ProjectsSectionComponent implements OnInit{
     },
     {
       imageUrl: './images/img-projects/project_backend.webp',
-      projectName: 'Sistema de exmenes - backend',
+      projectName: 'CRUD de exmenes - backend',
       technologies: ['JAVA', 'SPRINGBOOT', 'JWT'],
       repositoryUrl: 'https://github.com/sebastian-VB/testing-system-backend'
     },
@@ -39,7 +39,7 @@ export class ProjectsSectionComponent implements OnInit{
     },
     {
       imageUrl: './images/img-projects/project_backend.webp',
-      projectName: 'Sistema para consultorio médico - backend',
+      projectName: 'CRUD para consultorio médico - backend',
       technologies: ['JAVA', 'SPRINGBOOT', 'JWT'],
       repositoryUrl: 'https://github.com/sebastian-VB/crud_medical_office_withWT'
     },
@@ -51,10 +51,31 @@ export class ProjectsSectionComponent implements OnInit{
     },
   ];
 
-  ngOnInit(): void {
-    AOS.init({duration: 1000});
-    window.addEventListener('load', () => {
-      AOS.refresh();
+  ngAfterViewInit(): void {
+
+    ScrollReveal().reveal('.reveal-tit-pro', {
+      distance: '100px',
+      duration: 800,
+      easing: 'ease-in-out',
+      origin: 'rigth',
+      reset: true
     });
+
+    ScrollReveal().reveal('.reveal-prg', {
+      distance: '100px',
+      duration: 800,
+      easing: 'ease-in-out',
+      origin: 'left',
+      reset: true
+    });
+
+    ScrollReveal().reveal('.reveal-cards', {
+      distance: '100px',
+      duration: 800,
+      easing: 'ease-in-out',
+      origin: 'bottom',
+      reset: true
+    });
+
   }
 }
