@@ -1,12 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
 import { Project } from '../interfaces/project.interface';
+import ScrollReveal from 'scrollreveal';
 
 @Component({
   selector: 'app-projects-section',
   templateUrl: './projects-section.component.html',
   styleUrl: './projects-section.component.css'
 })
-export class ProjectsSectionComponent implements OnInit{
+export class ProjectsSectionComponent implements AfterViewInit{
 
   public profileUrl: string = 'https://github.com/sebastian-VB';
   public githubImg: string = './icons/github.svg';
@@ -50,6 +51,31 @@ export class ProjectsSectionComponent implements OnInit{
     },
   ];
 
-  ngOnInit(): void {
+  ngAfterViewInit(): void {
+
+    ScrollReveal().reveal('.reveal-tit-pro', {
+      distance: '100px',
+      duration: 800,
+      easing: 'ease-in-out',
+      origin: 'rigth',
+      reset: true
+    });
+
+    ScrollReveal().reveal('.reveal-prg', {
+      distance: '100px',
+      duration: 800,
+      easing: 'ease-in-out',
+      origin: 'left',
+      reset: true
+    });
+
+    ScrollReveal().reveal('.reveal-cards', {
+      distance: '100px',
+      duration: 800,
+      easing: 'ease-in-out',
+      origin: 'bottom',
+      reset: true
+    });
+
   }
 }
