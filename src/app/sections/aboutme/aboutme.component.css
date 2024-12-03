@@ -1,4 +1,9 @@
 
+.pw-container-myinfo, .pw-container-skills{
+  width: 100%;
+  overflow-x: hidden;
+}
+
 .pw-container-myinfo{
   background-color: #1A535C;
   @apply text-white p-5 text-center;
@@ -22,7 +27,6 @@
 /* design for skills and his container  */
 
 .pw-container-skills{
-  width: 100%;
   background: linear-gradient(to bottom, #1A535C 150px, white 10%);
   @apply p-10 mb-10;
 }
